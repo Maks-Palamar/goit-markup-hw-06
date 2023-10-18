@@ -456,11 +456,11 @@ img {
 
 /*-----------PORTFOLIO----------*/
 
-/*
+
 
 .portfoliosection {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfoliosection-title {
@@ -470,13 +470,13 @@ img {
 .portfoliosection-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    gap: 48px;
 }
 
 .portfoliosection-project {
     border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: calc((100% - 24px * 2) / 3);
+    width: 100%;
 }
 
 .portfoliosection-project:hover,
@@ -539,8 +539,6 @@ position: absolute;
 
 /*-----------FOOTER----------*/
 
-/*
-
 .footer {
     padding: 100px 0;
     background-color: #2e2f42;
@@ -549,27 +547,37 @@ position: absolute;
 
 .footer .container{
     display: flex;
-        align-items: baseline;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 72px;
 }
 
 .footer-info {
-    margin-right: 120px;
+    /*margin-right: 120px;*/
 }
 
 .footer .logo {
     margin-bottom: 16px;
     margin-right: 0;
-    display: inline-block;
+    display: flex;
+    text-transform: uppercase;
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 700;
+        justify-content: center;
 
 }
 
 .footer-text {
     color: #F4F4FD;
-    width: 264px;
+    width: 288px;
 }
 
 .footer-soc-section {
-    margin-right: 120px;
+    /*margin-right: 120px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-soc-title {
@@ -579,6 +587,8 @@ color: var(--WHITE, #FFF);
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-soc-list {
@@ -627,6 +637,8 @@ color: var(--WHITE, #FFF);
 .footer-form {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-input {
@@ -960,7 +972,7 @@ color: var(--WHITE, #FFF);
 
         .teamsection-list {
             gap: 64px 24px;
-            padding: 0 108px;
+           /* padding: 0 108px;*/
             flex-wrap: wrap;
         }
     
@@ -968,11 +980,49 @@ color: var(--WHITE, #FFF);
             width: calc((100% - 24px) / 2);
             max-width: 264px;
         }
+
+        .portfoliosection-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 74px 24px;
+        }
+
+        .portfoliosection-project {
+            width: calc((100% - 24px) / 2);
+        }
+
+        .footer .logo {
+            margin-bottom: 16px;
+            margin-right: 0;
+            display: inline-block;
+        }
+
+        .footer .container {
+            display: flex;
+            align-items: baseline;
+            gap: 72px 24px;
+            padding-left: 108px;
+        }
+        
+        .footer-soc-section {
+            margin-right: 120px;
+            display: block;
+            flex-wrap: nowrap;
+        }
+        
+        .footer-soc-title {
+            display: block;
+        }
+
+        .footer-form {
+        gap: 48px;
+        }
 }
 
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
+        /*padding: 0 156px 0 156px;*/
     }
 
     .hero {
@@ -1022,4 +1072,45 @@ color: var(--WHITE, #FFF);
     .teamsection-item {
             width: calc((100% - 24px * 3) / 4);
     }
+
+        .portfoliosection {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .portfoliosection-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px 24px;
+        }
+        .portfoliosection-project {
+            width: calc((100% - 24px * 2) / 3);
+        }
+
+        .footer-text {
+            color: #F4F4FD;
+            width: 264px;
+        }
+
+        .footer .container {
+            flex-wrap: nowrap;
+            gap: 0;
+            padding: 0 16px;
+        }
+
+        .footer-info {
+        margin-right: 120px;
+        }
+
+        
+
+        
+
+        .footer-form {
+            flex-wrap: nowrap;
+            justify-content: baseline;
+            gap: 24px;
+        }
+
+        
 }
