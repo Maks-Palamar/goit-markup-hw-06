@@ -362,12 +362,10 @@ img {
     background-color: #F4F4FD;
 }
 
-.teamsection .container{
-   
-}
+.teamsection .container {}
 
 .teamsection-title {
-    
+
     padding-left: 639;
     padding-right: 639;
     margin-bottom: 72px;
@@ -375,17 +373,20 @@ img {
 
 .teamsection-list {
     display: flex;
-    gap: 24px;
+    gap: 24px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .teamsection-item {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
         0px 1px 1px 0px rgba(46, 47, 66, 0.16),
         0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    width: 100%;
+    width: 264px;
     border-radius: 0px 0px 4px 4px;
-        background: var(--WHITE, #FFF);
-        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    background: var(--WHITE, #FFF);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .teamsection-item .container {
@@ -421,11 +422,13 @@ img {
     width: calc((100% - 24px * 3) / 4);
 }
 
+
+
 .teamsection-soc-link:hover,
 .teamsection-soc-link:focus,
 .teamsection-soc-link:active {
     background: #404BBF;
-    
+
 }
 
 .teamsection-soc-link {
@@ -435,16 +438,17 @@ img {
     align-items: center;
     justify-content: center;
     display: flex;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #4D5AE5;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .teamsection-soc-icon {
-    fill: #F4F4FD; 
+    /*padding: 12px;*/
+    fill: #F4F4FD;
 }
 
 
@@ -949,8 +953,20 @@ color: var(--WHITE, #FFF);
         text-align: left;
     }
 
-        .teamsection-soc {
-            width: calc((100% - 24px * 3) / 4);
+    .teamsection{
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+        .teamsection-list {
+            gap: 64px 24px;
+            padding: 0 108px;
+            flex-wrap: wrap;
+        }
+    
+        .teamsection-item {
+            width: calc((100% - 24px) / 2);
+            max-width: 264px;
         }
 }
 
@@ -991,6 +1007,16 @@ color: var(--WHITE, #FFF);
 
     .feature-text {
             font-weight: 400;
+    }
+
+    .teamsection {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .teamsection-list {
+        flex-wrap: nowrap;
+        display: flex;
     }
 
     .teamsection-item {
