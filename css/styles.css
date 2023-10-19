@@ -634,7 +634,7 @@ color: var(--WHITE, #FFF);
 
 /*-----------BACKDROP----------*/
 
-/*
+
 
 .backdrop {
     position: fixed;
@@ -656,15 +656,15 @@ color: var(--WHITE, #FFF);
 }
 
 .modal {
-    width: 408px;
-        min-height: 584px;
+    width: 288px;
+        min-height: 623px;
         border-radius: 4px;
         background: var(--DAIRY, #FCFCFC);
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        padding: 72px 24px 24px 24px;
+        padding: 72px 16px 24px 16px;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 1px 3px rgba(0, 0, 0, 0.12),
             0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -862,8 +862,130 @@ color: var(--WHITE, #FFF);
     fill: #F4F4FD;
     border: none;
 }
-*/
 
+
+/*------------------------------*/
+
+.mainmenu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mainmenu {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    background: var(--DAIRY, #FCFCFC);
+    padding: 72px 16px 40px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainmenu-item {
+}
+
+.mainmenu-list {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.mainmenu-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--NAVY-BLUE, #2E2F42);
+        font-family: Roboto;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.11;
+        /* 111.111% */
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+}
+
+.mainmenu-link:hover,
+.mainmenu-link:focus {
+    color: var(--OCEAN, #404bbf);
+}
+
+.mainmenu-socials {}
+
+.mainmenu-address {
+    font-style: normal;
+}
+
+
+.mainmenu-address-list {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    margin-bottom: 48px;
+}
+
+.mainmenu-address-list-item {}
+
+.mainmenu-address-list-link {
+    color: var(--SLATE, #434455);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mainmenu-address-list-link:hover,
+.mainmenu-address-list-link:focus {
+    color: var(--OCEAN, #404bbf);}
+
+
+.mainmenu-soc-list {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.mainmenu-soc {
+    
+    width: 40px;
+}
+
+.mainmenu-soc-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    border-radius: 50%;
+    background: #4D5AE5;
+    flex-direction: row;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+}
+
+.mainmenu-soc-link:hover,
+.mainmenu-soc-link:focus,
+.mainmenu-soc-link:active {
+    background: #31d0aa;
+
+}
+
+
+
+.mainmenu-soc-icon {
+    fill: #F4F4FD;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -973,17 +1095,15 @@ color: var(--WHITE, #FFF);
     color: var(--OCEAN, #404bbf);
 }
 
-
-
-
-
 .address {font-style: normal;}
     
 
 .address-list {
     display: flex;
-    gap: 40px;
+    gap: 12px;
     flex-direction: column;
+    padding-top: 16px;
+        padding-bottom: 16px;
 }
 
 .address-list-item {}
@@ -994,8 +1114,6 @@ color: var(--WHITE, #FFF);
         font-weight: 400;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        padding-top: 24px;
-        padding-bottom: 24px;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1087,6 +1205,12 @@ color: var(--WHITE, #FFF);
         .footer-form {
         gap: 48px;
         }
+
+        .modal {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 24px 24px;
+        }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1172,10 +1296,6 @@ color: var(--WHITE, #FFF);
         margin-right: 120px;
         }
 
-        
-
-        
-
         .footer-form {
             flex-wrap: nowrap;
             justify-content: baseline;
@@ -1184,6 +1304,9 @@ color: var(--WHITE, #FFF);
 
         .address-list {
             flex-direction: unset;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            gap: 40px;
         }
         
 }
