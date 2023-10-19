@@ -170,6 +170,15 @@ img {
     background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office1-2x.jpg);
+    }
+}
+
 .hero-title {
     color: var(--WHITE, #FFF);
         text-align: center;
@@ -482,19 +491,17 @@ position: absolute;
 }
 
 .footer .container{
-    /*display: flex;
+   /*display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 72px;*/
+    gap: 72px;*/
 
 }
 
-.footer-conent {
-    margin: 0 auto;
+.footer-content {
     display: flex;
-        align-items: center;
-        /*flex-wrap: wrap;*/
-        gap: 72px;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .footer-info {
@@ -1190,7 +1197,7 @@ color: var(--WHITE, #FFF);
         .portfoliosection-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 74px 24px;
+            gap:  24px;
         }
 
         .portfoliosection-project {
@@ -1213,17 +1220,27 @@ color: var(--WHITE, #FFF);
             gap: 72px 24px;
             padding: 0;
             /*padding-left: 108px;*/
+            flex-wrap: wrap;
+            max-width: 768px;
         }
 
-        .footer-conent {
+        .footer-content {
             margin: 0 auto;
             display: flex;
+            gap: 72px 24px;
+            align-items: baseline;
+            justify-content: start;
+            flex-wrap: wrap;
+            max-width: 552px;
         }
         
+        .footer-text {
+            width: 264px;
+        }
+
         .footer-soc-section {
-            margin-right: 120px;
+            /*margin-right: 120px;*/
             display: block;
-            flex-wrap: nowrap;
         }
         
         .footer-soc-title {
@@ -1231,16 +1248,20 @@ color: var(--WHITE, #FFF);
         }
 
         .subscribe {
+            display: inline-block;
         }
 
         .footer-form {
-        gap: 48px;
+        gap: 24px;
         }
 
         .modal {
         width: 408px;
         min-height: 584px;
         padding: 72px 24px 24px 24px;
+        }
+
+        .footer-info {
         }
 }
 
@@ -1332,6 +1353,27 @@ color: var(--WHITE, #FFF);
             padding: 0 16px;
         }
 
+                .footer .container {
+                    display: flex;
+                    padding: 0;
+                    /*padding-left: 108px;*/
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+        
+                .footer-content {
+                    margin: 0 auto;
+                    display: flex;
+                    gap: 0;
+                    align-items: baseline;
+                    flex-wrap: nowrap;
+                    max-width: none;
+                }
+
+                .footer-soc-section {
+                    margin-right: 80px;
+                }
+
         .footer-info {
         margin-right: 120px;
         }
@@ -1349,4 +1391,5 @@ color: var(--WHITE, #FFF);
             gap: 40px;
         }
         
+
 }
