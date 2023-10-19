@@ -98,6 +98,7 @@ img {
     border-bottom: 1px solid #e7e9fc;
     width: 100%;
     position: fixed;
+    z-index: 1;
     background: #FFF;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -132,7 +133,6 @@ img {
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        margin-right: 76px;
         padding: 17.5px 0;
 }
 
@@ -476,15 +476,24 @@ position: absolute;
 /*-----------FOOTER----------*/
 
 .footer {
-    padding: 100px 0;
+    padding: 97.5px 0;
     background-color: #2e2f42;
     
 }
 
 .footer .container{
-    display: flex;
+    /*display: flex;
         align-items: center;
         flex-wrap: wrap;
+        gap: 72px;*/
+
+}
+
+.footer-conent {
+    margin: 0 auto;
+    display: flex;
+        align-items: center;
+        /*flex-wrap: wrap;*/
         gap: 72px;
 }
 
@@ -493,7 +502,7 @@ position: absolute;
 }
 
 .footer .logo {
-    margin-bottom: 16px;
+    margin-bottom: 17.5px;
     margin-right: 0;
     display: flex;
     text-transform: uppercase;
@@ -501,7 +510,7 @@ position: absolute;
         font-size: 18px;
         font-weight: 700;
         justify-content: center;
-
+        padding: 0;
 }
 
 .footer-text {
@@ -920,7 +929,11 @@ color: var(--WHITE, #FFF);
     color: var(--OCEAN, #404bbf);
 }
 
-.mainmenu-socials {}
+.mainmenu-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
 
 .mainmenu-address {
     font-style: normal;
@@ -931,18 +944,19 @@ color: var(--WHITE, #FFF);
     display: flex;
     gap: 24px;
     flex-direction: column;
-    margin-bottom: 48px;
+    /*margin-bottom: 48px;*/
 }
 
 .mainmenu-address-list-item {}
 
 .mainmenu-address-list-link {
     color: var(--SLATE, #434455);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #434455;
 }
 
 .mainmenu-address-list-link:hover,
@@ -993,6 +1007,10 @@ color: var(--WHITE, #FFF);
 
 
 @media screen and (min-width: 768px) {
+    .main {
+            padding-top: 92px;
+        }
+    
     .container {
         max-width: 768px;
     }
@@ -1032,15 +1050,7 @@ color: var(--WHITE, #FFF);
 
 
 .logo {
-        color: #4D5AE5;
-        font-family: Raleway, sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
+        
         margin-right: 76px
 }
 
@@ -1149,10 +1159,6 @@ color: var(--WHITE, #FFF);
         margin-bottom: 36px;
     }
 
-    .main {
-        padding-top: 72px;
-    }
-
     .ourfeatures-list {
         gap: 72px 24px;
         flex-wrap: wrap;
@@ -1191,17 +1197,27 @@ color: var(--WHITE, #FFF);
             width: calc((100% - 24px) / 2);
         }
 
+
         .footer .logo {
             margin-bottom: 16px;
             margin-right: 0;
             display: inline-block;
         }
 
+        .footer {
+        }
+
         .footer .container {
             display: flex;
             align-items: baseline;
             gap: 72px 24px;
-            padding-left: 108px;
+            padding: 0;
+            /*padding-left: 108px;*/
+        }
+
+        .footer-conent {
+            margin: 0 auto;
+            display: flex;
         }
         
         .footer-soc-section {
@@ -1212,6 +1228,9 @@ color: var(--WHITE, #FFF);
         
         .footer-soc-title {
             display: block;
+        }
+
+        .subscribe {
         }
 
         .footer-form {
@@ -1226,6 +1245,10 @@ color: var(--WHITE, #FFF);
 }
 
 @media screen and (min-width: 1158px) {
+    .main {
+        padding-top: 72px;
+    }
+
     .container {
         max-width: 1158px;
         /*padding: 0 156px 0 156px;*/
@@ -1291,6 +1314,11 @@ color: var(--WHITE, #FFF);
         }
         .portfoliosection-project {
             width: calc((100% - 24px * 2) / 3);
+        }
+
+        .footer {
+            padding: 101.5px 0;
+    
         }
 
         .footer-text {
