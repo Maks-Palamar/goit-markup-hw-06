@@ -653,6 +653,7 @@ color: var(--WHITE, #FFF);
 
 
 .backdrop {
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -889,6 +890,7 @@ color: var(--WHITE, #FFF);
 }
 
 .mainmenu {
+    z-index: 3;
     position: fixed;
         top: 0;
         left: 0;
